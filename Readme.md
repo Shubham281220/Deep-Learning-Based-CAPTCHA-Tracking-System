@@ -1,4 +1,3 @@
-markdown
 # Deep Learning-Based CAPTCHA Tracking System
 
 **Captcha-Tracking-System** is a Flask-based web application designed for CAPTCHA recognition and user authentication. The project supports multiple CAPTCHA types, enabling automation of tasks that require CAPTCHA processing and user authentication through a secure interface.
