@@ -48,63 +48,44 @@ On a smaller scale, this project could automate routine tasks that require bypas
 ## Installation and Environment Setup
 
 ### Step 1: Clone the Repository
-bash
+```bash
 git clone https://github.com/yourusername/Deep-Learning-Based-CAPTCHA-Tracking-System.git
 cd Deep-Learning-Based-CAPTCHA-Tracking-System
-
+```
 
 ### Step 2: Set Up Python Environment
 1. Install Python (3.7 or higher).
 2. Create and activate a virtual environment:
-   bash
+   ```bash
    python -m venv env
    source env/bin/activate  # On Windows: .\env\Scripts\activate
-   
+   ```
 3. Install required Python libraries:
-   bash
+  ``` bash
    pip install flask flask-mysqldb Pillow tensorflow keras opencv-python
-   
+   ```
 
 ### Step 3: Database Setup
 1. Install MySQL and create a database named `captchalogin`.
 2. Create a table named `accounts`:
-   sql
+   ```sql
    CREATE TABLE accounts (
        id INT AUTO_INCREMENT PRIMARY KEY,
        username VARCHAR(50) NOT NULL,
        password VARCHAR(255) NOT NULL,
        email VARCHAR(100) NOT NULL
    );
-   
+   ```
 
 ### Step 4: Prepare CAPTCHA Models
 - Place the pre-trained model files (`gst_ctc_v2.h5`, `sbi_ctc_v1.h5`, `tds_ctc_v1.h5`) in the project directory.
 
 ### Step 5: Run the Application
 - Start the Flask application:
-  bash
+  ```bash
   python app.py
-  
+  ```
 - Access the application in your browser at `http://127.0.0.1:5000/`.
-
----
-
-## Project Structure
-plaintext
-Captcha-Tracking-Bot/
-├── app.py                # Main Flask application
-├── captcha.py            # CAPTCHA processing logic
-├── captcha_parameters.json  # Parameters for CAPTCHA processing
-├── gst_ctc_v2.h5         # GST CAPTCHA model
-├── sbi_ctc_v1.h5         # SBI CAPTCHA model
-├── tds_ctc_v1.h5         # TDS CAPTCHA model
-├── settings.py           # CAPTCHA model configuration
-├── templates/            # HTML templates for the web interface
-├── static/               # Static assets (e.g., CSS, images)
-├── README.md             # Project documentation
-
-
----
 
 ## Technologies Used
 - **Backend:** Flask
